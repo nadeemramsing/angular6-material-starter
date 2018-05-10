@@ -38,10 +38,14 @@ import { routes } from './/app-routing.module';
     //useHash: false => PathLocationStrategy used (https://angular.io/api/common/PathLocationStrategy)
     //location.go('/foo') => url becomes example.com/my/app/base/href/foo (APP_BASE_HREF must be provided)
 
-    //How APP_BASE_HREF is provided:
+    //How APP_BASE_HREF is provided globally:
     /* @NgModule({
       providers: [{provide: APP_BASE_HREF, useValue: '/my/app/base/href'}]
     }) */
+
+    //individually using href
+    /* <a mat-list-item href="#" routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</a> */
+
   ],
   providers: [],
   bootstrap: [AppComponent]
