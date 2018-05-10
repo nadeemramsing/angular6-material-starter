@@ -1,21 +1,19 @@
+//modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MaterialModule } from './material-module';
+
+//components
+import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialTableComponent } from './material-table/material-table.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
-const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'table', component: MaterialTableComponent },
-  { path: '', component: DashboardComponent },
-];
-
+//routing
+import { routes } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,22 +26,11 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    AppRoutingModule,
+    MaterialModule,
     RouterModule.forRoot(routes, { useHash: true })
     //hashtag symbol appears
     //From what I understand, 
-    
+
     //useHash: true => HashLocationStrategy used (https://angular.io/api/common/HashLocationStrategy)
     //location.go('/foo') => url becomes example.com/#/foo (i.e. prefix dismissed)
     //used in AngularJS by default?
