@@ -41,11 +41,12 @@ const routes: Routes = [
     MatSortModule,
     AppRoutingModule,
     RouterModule.forRoot(routes, { useHash: true })
-    //hashTag symbol appears
+    //hashtag symbol appears
     //From what I understand, 
     
     //useHash: true => HashLocationStrategy used (https://angular.io/api/common/HashLocationStrategy)
     //location.go('/foo') => url becomes example.com/#/foo (i.e. prefix dismissed)
+    //used in AngularJS by default?
 
     //useHash: false => PathLocationStrategy used (https://angular.io/api/common/PathLocationStrategy)
     //location.go('/foo') => url becomes example.com/my/app/base/href/foo (APP_BASE_HREF must be provided)
