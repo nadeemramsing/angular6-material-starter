@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialTableComponent } from './material-table/material-table.component';
 
 export const routes: Routes = [
+  { path: '**', redirectTo: 'dashboard' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'table', component: MaterialTableComponent },
 ];
