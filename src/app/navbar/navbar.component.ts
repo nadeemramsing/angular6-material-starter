@@ -7,15 +7,19 @@ import { Observable } from 'rxjs';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent{
-  pageNo:boolean=false;
+export class NavbarComponent {
+  //binded variables
+  pageNo: boolean = false;
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
-  toggle(){
+  
+  //services goes here
+  constructor(private breakpointObserver: BreakpointObserver) { }
+  
+  //binded methods
+  toggle() {
     this.pageNo = !this.pageNo;
   }
 
 
-  
+
 }

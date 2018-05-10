@@ -13,7 +13,7 @@ import { MaterialTableComponent } from './material-table/material-table.componen
 import { NavbarComponent } from './navbar/navbar.component';
 
 //routing
-import { routes } from './/app-routing.module';
+import { routes } from './/routing.module';
 
 @NgModule({
   declarations: [
