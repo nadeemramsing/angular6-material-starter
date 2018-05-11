@@ -11,6 +11,8 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .then(module => {
+    if (environment.production)
+      return;
     let
       applicationRef = module.injector.get(ApplicationRef),
       appComponent = applicationRef.components[0];
