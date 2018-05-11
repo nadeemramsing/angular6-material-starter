@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class NavbarComponent {
   //binded variables
-  pageNo: boolean = false;
+  isNavbarOpen: boolean = false;
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   
   //services goes here
@@ -17,7 +17,7 @@ export class NavbarComponent {
   
   //binded methods
   toggle() {
-    this.pageNo = !this.pageNo;
+    this.isNavbarOpen = !this.isNavbarOpen;
   }
 
 
